@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    max-width: 100%;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    #carrito {
+        background-color: yellow;
+        width: 130px;
+        justify-self: flex-end;
+    }
+}
+
+#productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgb(172, 170, 170);
+ }
+
+ .nuevo-producto {
+     height: 20px;
+     width: 20px;
+     margin: 5px;
+ }
+
