@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  max-width: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  height: 50px;
+  width: 50px;
+}
+
+header #carrito {
+  background-color: yellow;
+  width: 130px;
+  justify-self: flex-end;
+}
+
+#productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #acaaaa;
+}
+
+.nuevo-producto {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+}
+/*# sourceMappingURL=style.css.map */
