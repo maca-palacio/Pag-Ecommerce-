@@ -25,17 +25,17 @@ class Producto {
 
 function add_prod() {
     let codigo= document.getElementById("cod");
-    setid(codigo);
+    setid(codigo.value);
     let nombre= document.getElementById("name");
-    setname(nombre);
+    setname(nombre.value);
     let descripcion= document.getElementById("descr");
-    setdescr(descripcion);
+    setdescr(descripcion.value);
     let cantidad= document.getElementById("cant");
-    setcant(cantidad);
+    setcant(cantidad.value);
     let valor= document.getElementById("val");
-    setval(valor);
+    setval(valor.value);
 
-    let new_prod= new Producto(codigo,nombre,descripcion,cantidad,valor);
+    let new_prod= new Producto(this.cod,this.name,this.descr,this.cant,this.val);
     localStorage.setItem('item', JSON.stringify(new_prod));
 }
 
