@@ -23,14 +23,17 @@ class Producto {
 
 }
 
-
-
 function add_prod() {
     let codigo= document.getElementById("cod");
+    setid(codigo);
     let nombre= document.getElementById("name");
+    setname(nombre);
     let descripcion= document.getElementById("descr");
+    setdescr(descripcion);
     let cantidad= document.getElementById("cant");
+    setcant(cantidad);
     let valor= document.getElementById("val");
+    setval(valor);
 
     let new_prod= new Producto(codigo,nombre,descripcion,cantidad,valor);
     localStorage.setItem('item', JSON.stringify(new_prod));
