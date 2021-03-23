@@ -25,17 +25,22 @@ class Producto {
 
 
 
-function add_prod(objeto_prod) {
-
-    let btn = document.getElementById("btn"); 
+function add_prod() {
     let codigo= document.getElementById("cod");
     let nombre= document.getElementById("name");
     let descripcion= document.getElementById("descr");
     let cantidad= document.getElementById("cant");
     let valor= document.getElementById("val");
 
-
- 
+    let new_prod= new Producto(codigo,nombre,descripcion,cantidad,valor);
+    localStorage.setItem('item', JSON.stringify(new_prod));
 }
+
+let btn = document.getElementById("btn");
+btn.addEventListener('click',(event)=>{
+  add_prod();
+    
+})
+
 
 
