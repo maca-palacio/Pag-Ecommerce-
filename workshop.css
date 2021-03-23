@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    padding:20px;
+}
+
+.contenedor {
+    display:flex;
+    flex-direction: column;
+}
+
+#lista-productos {
+    list-style: none;
+}
+
+li {
+    padding-top:10px;
+}
