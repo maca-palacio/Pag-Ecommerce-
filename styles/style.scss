@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: white;
     max-width: 100%;
+    text-decoration: none;
 }
 
 
@@ -14,10 +15,13 @@ header {
         height: 50px;
         width: 50px;
     }
-    #carrito {
+    a {
+        display: flex;
+        #carrito {
         background-color: yellow;
         width: 130px;
         justify-self: flex-end;
+        }
     }
 }
 

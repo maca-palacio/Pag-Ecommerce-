@@ -1,37 +1,47 @@
-/* var objeto_prueba = {cod:"123773",name:"remera",descr:"remera de verano roja",cant:10,val:1200};
-console.log(objeto_prueba);
-
-localStorage.setItem("claveprueba",JSON.stringify(objeto_prueba)); */
-
-
+localStorage.removeItem('claveprueba');
 //Get a la ul a donde quiero appendear
 var prod_div = document.getElementById("contenedor-carrito");
 
 // recorrer todo el localstorage
-for (let i=0;i<localStorage.length;i++) {
-    let key = localStorage.key(i);
-    console.log(key);
-    let producto_r = localStorage.getItem(key);
-    console.log(producto_r);
-    objeto_product = JSON.parse(producto_r);
-    // acá habría que appendear ese valor (únicamente las propiedades que necesito) al li que quiero sumar al DOM
-    let cod_r = objeto_product.cod;
-    let name_r = objeto_product.name;
-    let descr_r = objeto_product.descr;
-    let cant_r = objeto_product.cant;
-    let val_r = objeto_product.val;
+let cart_prods = searchLocalStorage();
 
-    console.log(name_r);
+// Listar los productos en el HTML
+const $items2 = document.querySelector('#contenedor-carrito');
+function List_cart() {
+    for (let info of cart_prods) {
+        //Contenedor de los productos
+        let miNodo = document.createElement('div');
+        //Card body
+        let miNodoCard = document.createElement('div');
+        //name
+        let miNodoName = document.createElement('h2');
+        miNodoName.textContent = info['name'];
+        //descr
+        let miNodoDescr = document.createElement('h4');
+        miNodoDescr.textContent = info['descr'];
+        //valor
+        let miNodoVal = document.createElement('h4');
+        miNodoVal.textContent = info['val'] + 'USD';
 
-    addNewProd(cod_r,name_r,descr_r,cant_r,val_r);
+        miNodoCard.appendChild(miNodoName);
+        miNodoCard.appendChild(miNodoDescr);
+        miNodoCard.appendChild(miNodoVal);
+        miNodo.appendChild(miNodoCard);
+        $items2.appendChild(miNodo);
+    }
+}
     
+// función que recorre el local storage y trae los productos del carrito
+function searchLocalStorage() {
+    for (let i=0;i<localStorage.length;i++) {
+        let key = localStorage.key(i);
+        let cart_prods = JSON.parse(localStorage.getItem(key));
+        //devuelve array de objetos cart_prods
+        console.log(cart_prods);
+        // Está bien acá el return o va fuera del for loop?
+        return cart_prods;
+    } 
 }
 
-// funcion que crea un li y le agrega los valores que quiero rescatar
-function addNewProd (cod_r,name_r,descr_r,cant_r,val_r) {
-    let new_div = document.createElement("div");
-    let titulo = document.createElement("h1");
-    titulo.textContent = name_r;
-    new_div.appendChild(titulo);
-    prod_div.appendChild(new_div);
-}
+//carga el carrito
+addEventListener('loadstart', List_cart());
