@@ -98,7 +98,7 @@ function List_prod(){
         miNodoDescr.textContent=info['descr'];
         //Valor
         let miNodoVal = document.createElement('h4');
-        miNodoVal.textContent=info['val'];
+        miNodoVal.textContent=info['val'] + 'USD';
 
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
