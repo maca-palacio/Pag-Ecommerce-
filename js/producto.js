@@ -92,6 +92,10 @@ function List_prod() {
 }
 
 let list_carrito=[];
+if (localStorage.getItem('producto')) {
+    list_carrito = JSON.parse(localStorage.getItem('producto'));
+}
+
 //Agregar productos al carrito 
 function add_prod() {
     for (let i=0;i<prods.length;i++){
@@ -113,6 +117,3 @@ function add_prod() {
 
 //carga los productos 
 addEventListener('loadstart', List_prod());
-
-
-
