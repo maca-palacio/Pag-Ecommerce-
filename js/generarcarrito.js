@@ -1,12 +1,10 @@
-localStorage.clear();
-
-var objeto_prueba = {cod:"123773",name:"remera",descr:"remera de verano roja",cant:10,val:1200};
+/* var objeto_prueba = {cod:"123773",name:"remera",descr:"remera de verano roja",cant:10,val:1200};
 console.log(objeto_prueba);
 
-localStorage.setItem("claveprueba",JSON.stringify(objeto_prueba));
+localStorage.setItem("claveprueba",JSON.stringify(objeto_prueba)); */
 
 
-//Getear la ul a donde quiero appendear
+//Get a la ul a donde quiero appendear
 var prod_div = document.getElementById("contenedor-carrito");
 
 // recorrer todo el localstorage
