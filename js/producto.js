@@ -55,26 +55,24 @@ let pro33 = new Producto(33, 'Queso de cabra', '500 g', 1, 2.5);
 let pro34 = new Producto(34, 'Cerveza Sasquatch', '24 - bot. 12 l', 1, 14);
 let pro35 = new Producto(35, 'Cerveza negra Steeleye', '24 - bot. 12 l', 1, 18);
 
-let prods = [prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8, prod9, prod10, prod11, prod12, prod13, prod14, prod15, prod16, prod17, prod18, prod19, prod20, prod21, prod22, prod23, prod24, prod25, prod26, prod27, prod28, prod29,prod30, prod31,prod32, prod33,prod34, prod35]
+let prods = [prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8, prod9, prod10, prod11, prod12, prod13, prod14, prod15, prod16, prod17, prod18, prod19, prod20, prod21, prod22, prod23, prod24, prod25, prod26, prod27, prod28, prod29,prod30, prod31,prod32, prod33,prod34, prod35];
 
 
 
 
 
-function add_prod() {
+function add_prod(objeto_prods) {
     let codigo = document.getElementById("cod");
-    setid(codigo.value);
+    objeto_prods.setid(codigo.value);
     let nombre = document.getElementById("name");
-    setname(nombre.value);
+    objeto_prods.setname(nombre.value);
     let descripcion = document.getElementById("descr");
-    setdescr(descripcion.value);
+    objeto_prods.setdescr(descripcion.value);
     let cantidad = document.getElementById("cant");
-    setcant(cantidad.value);
+    objeto_prods.setcant(cantidad.value);
     let valor = document.getElementById("val");
-    setval(valor.value);
-
-    let new_prod = new Producto(this.cod, this.name, this.descr, this.cant, this.val);
-    localStorage.setItem('item', JSON.stringify(new_prod));
+    objeto_prods.setval(valor.value);
+    localStorage.setItem('item', JSON.stringify(objeto_prods));
 }
 
 let btn = document.getElementById("btn");
