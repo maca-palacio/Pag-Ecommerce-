@@ -35,6 +35,5 @@ function addNewProd (cod_r,name_r,descr_r,cant_r,val_r) {
     let titulo = document.createElement("h1");
     titulo.textContent = name_r;
     new_div.appendChild(titulo);
-
     prod_div.appendChild(new_div);
 }
