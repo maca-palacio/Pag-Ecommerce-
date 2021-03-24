@@ -65,6 +65,7 @@ function List_prod() {
     for (let info of prods) {
         //Contenedor de los productos  
         let miNodo = document.createElement('div');
+        miNodo.classList.add('contenedor');
         //Card body 
         let miNodoCard = document.createElement('div');
         //name 
