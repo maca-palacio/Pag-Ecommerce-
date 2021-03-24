@@ -1,4 +1,3 @@
-localStorage.removeItem('claveprueba');
 //Get a la ul a donde quiero appendear
 var prod_div = document.getElementById("contenedor-carrito");
 
@@ -31,16 +30,13 @@ function List_cart() {
     }
 }
     
-// función que recorre el local storage y trae los productos del carrito
+
 function searchLocalStorage() {
-    for (let i=0;i<localStorage.length;i++) {
-        let key = localStorage.key(i);
-        let cart_prods = JSON.parse(localStorage.getItem(key));
-        //devuelve array de objetos cart_prods
-        console.log(cart_prods);
-        // Está bien acá el return o va fuera del for loop?
-        return cart_prods;
-    } 
+    // validar que haya productos
+    let cart_prods = JSON.parse(localStorage.getItem('producto'));
+    //devuelve array de objetos cart_prods
+    console.log(cart_prods);
+    return cart_prods;
 }
 
 //carga el carrito

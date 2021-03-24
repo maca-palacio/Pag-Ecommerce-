@@ -34,6 +34,12 @@ header a #carrito {
   justify-self: flex-end;
 }
 
+header a #home-btn {
+  background-color: yellow;
+  width: 130px;
+  justify-self: flex-end;
+}
+
 #productos {
   display: -webkit-box;
   display: -ms-flexbox;

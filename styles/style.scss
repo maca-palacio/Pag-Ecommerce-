@@ -18,9 +18,14 @@ header {
     a {
         display: flex;
         #carrito {
-        background-color: yellow;
-        width: 130px;
-        justify-self: flex-end;
+            background-color: yellow;
+            width: 130px;
+            justify-self: flex-end;
+        }
+        #home-btn {
+            background-color: yellow;
+            width: 130px;
+            justify-self: flex-end;
         }
     }
 }
