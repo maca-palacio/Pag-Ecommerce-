@@ -36,7 +36,7 @@ function List_cart() {
     
 
 function searchLocalStorage() {
-    // validar que haya productos
+    // validar que haya productos POR HACER
     let cart_prods = JSON.parse(localStorage.getItem('producto'));
     //devuelve array de objetos cart_prods
     console.log(cart_prods);

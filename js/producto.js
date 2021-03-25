@@ -76,10 +76,10 @@ function List_prod() {
         miNodoName.textContent = info['name'];
         //Descripción del producto
         let miNodoDescr = document.createElement('h4');
+        miNodoDescr.textContent = info['descr'];
         //img
         let miNodoImg = document.createElement('img');
         miNodoImg.src = info['img'];
-        miNodoDescr.textContent = info['descr'];
         //imagen del producto 
         let miNodoimg=document.createElement('img');
         miNodoimg.setAttribute('src',[img]);
@@ -95,11 +95,7 @@ function List_prod() {
 
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
-<<<<<<< HEAD
         miNodoCard.appendChild(miNodoImg);
-=======
-        miNodoCard.appendChild(miNodoimg);
->>>>>>> 2813cce78f0ca507fcaaca9fb7d9a80fab0982bd
         miNodoCard.appendChild(miNodoVal);
         miNodoCard.appendChild(miNodoBoton);
         miNodo.appendChild(miNodoCard);
