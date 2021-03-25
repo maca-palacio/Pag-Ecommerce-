@@ -18,12 +18,16 @@ function List_cart() {
         //descr
         let miNodoDescr = document.createElement('h4');
         miNodoDescr.textContent = info['descr'];
+        //img
+        let miNodoImg = document.createElement('img');
+        miNodoImg.src = info['img'];
         //valor
         let miNodoVal = document.createElement('h4');
         miNodoVal.textContent = info['val'] + 'USD';
-
+        
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
+        miNodoCard.appendChild(miNodoImg);
         miNodoCard.appendChild(miNodoVal);
         miNodo.appendChild(miNodoCard);
         $items2.appendChild(miNodo);

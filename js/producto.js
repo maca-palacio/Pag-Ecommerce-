@@ -72,6 +72,9 @@ function List_prod() {
         miNodoName.textContent = info['name'];
         //Descripción del producto
         let miNodoDescr = document.createElement('h4');
+        //img
+        let miNodoImg = document.createElement('img');
+        miNodoImg.src = info['img'];
         miNodoDescr.textContent = info['descr'];
         //Valor
         let miNodoVal = document.createElement('h4');
@@ -84,6 +87,7 @@ function List_prod() {
 
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
+        miNodoCard.appendChild(miNodoImg);
         miNodoCard.appendChild(miNodoVal);
         miNodoCard.appendChild(miNodoBoton);
         miNodo.appendChild(miNodoCard);
