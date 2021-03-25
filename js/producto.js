@@ -1,8 +1,9 @@
 class Producto {
-    constructor(cod, name, descr, cant, val) {
+    constructor(cod, name, descr,img, cant, val) {
         this.cod = cod;
         this.name = name;
         this.descr = descr;
+        this.img=img;
         this.cant = cant;
         this.val = val;
 
@@ -13,6 +14,8 @@ class Producto {
     setname(value) { this.name = value; }
     getdescr() { return this.descr; }
     setdescr(value) { this.descr = value; }
+    getimg() { return this.img; }
+    setimg(value) { this.img = value; }
     getcant() { return this.cant; }
     setcant(value) { this.cant = value; }
     getval() { return this.val; }
@@ -74,6 +77,10 @@ function List_prod() {
         //Descripción del producto
         let miNodoDescr = document.createElement('h4');
         miNodoDescr.textContent = info['descr'];
+        //imagen del producto 
+        let miNodoimg=document.createElement('img');
+        miNodoimg.setAttribute('src',[img]);
+
         //Valor
         let miNodoVal = document.createElement('h4');
         miNodoVal.textContent = info['val'] + 'USD';
@@ -85,6 +92,7 @@ function List_prod() {
 
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
+        miNodoCard.appendChild(miNodoimg);
         miNodoCard.appendChild(miNodoVal);
         miNodoCard.appendChild(miNodoBoton);
         miNodo.appendChild(miNodoCard);
@@ -105,9 +113,10 @@ function add_prod() {
             let new_cod=prods[i].getcod();
             let new_name=prods[i].getname();
             let new_descr=prods[i].getdescr();
+            let new_img=prods[i].getimg();
             let new_cant=prods[i].getcant();
             let new_val=prods[i].getval();
-            let add_newprod=new Producto(new_cod,new_name,new_descr,new_cant,new_val);
+            let add_newprod=new Producto(new_cod,new_name,new_descr,new_img,new_cant,new_val);
             list_carrito.push(add_newprod);
         }
     }
