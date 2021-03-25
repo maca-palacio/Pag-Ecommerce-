@@ -33,6 +33,8 @@ function List_cart() {
         $items2.appendChild(miNodo);
     }
 }
+
+
     
 
 function searchLocalStorage() {

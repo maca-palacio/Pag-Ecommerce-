@@ -30,6 +30,17 @@ header {
     }
 }
 
+.btn-ordenamiento {
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 50px;
+    padding: 0 10px;
+    &:hover {
+        background-color: yellow;
+        color: #000;
+    }
+}
+
 #productos {
     display: flex;
     flex-direction: row;
