@@ -24,6 +24,12 @@ function List_cart() {
         //valor
         let miNodoVal = document.createElement('h4');
         miNodoVal.textContent = info['val'] + 'USD';
+
+        //Creo el boton de agregar 
+        let miNodoBoton = document.createElement('button');
+        miNodoBoton.textContent = '- Eliminar';
+        miNodoBoton.setAttribute('id', info['cod']);
+        miNodoBoton.addEventListener('click', eliminar_producto);
         
         miNodoCard.appendChild(miNodoName);
         miNodoCard.appendChild(miNodoDescr);
@@ -42,6 +48,14 @@ function searchLocalStorage() {
     console.log(cart_prods);
     return cart_prods;
 }
+
+function eliminar_producto(){
+    
+
+}
+
+
+
 
 //carga el carrito
 addEventListener('loadstart', List_cart());
